@@ -1,4 +1,5 @@
 <center>
+
 [![Blood Work][is-image]][ds-link]
 
 Blood Work
@@ -17,10 +18,15 @@ Rock-bottom pricing for health and fitness lifestyle bloodwork
     $ yarn
 
 
+<br />
+<br />
+<br />
 <center>
-[![Fresh Software by Dimension](https://dimensionsoftware.com/static/images/github/software_by.png)](https://dimensionsoftware.com)
+
+[![Fresh Software by Dimension][ds-image]][ds-link]
 </center>
 
 [ds-link]: https://dimensionsoftware.com
 [is-image]: https://dimensionsoftware.com/static/images/github/skull_keys.png
 [html5-image]: http://img.shields.io/badge/HTML-5-blue.svg?style=flat
+[ds-image]: https://dimensionsoftware.com/static/images/github/software_by.png
