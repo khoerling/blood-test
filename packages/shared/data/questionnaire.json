@@ -1,0 +1,35 @@
+{
+  "Thyroid": {
+    "History": [
+      "My family (parent, sibling, child) has a history of thyroid disease",
+      "I’ve had a thyroid problem (i.e., hyperthyroidism, Graves’ disease, Hashimoto’s thyroiditis, post-partum thyroiditis, goiter, nodules, thyroid cancer) in the past",
+      "A member of my family or I have currently or in the past been diagnosed with an autoimmune disease",
+      "I have had radiation treatment to my head, neck, chest, tonsil area, etc.",
+      "I grew up, live, or work near or at a nuclear plant",
+      "Women: I have a history of infertility or miscarriage"
+    ],
+    "Signs and Symptoms": [
+      "I am gaining weight for no clear reason or am unable to lose weight with a diet and exercise program",
+      "My “normal” body temperature is low (below 98.2° when I take it)",
+      "My hands and feet are cold to the touch and I frequently feel cold when others do not",
+      "I feel fatigued or exhausted more than normal",
+      "I have a slow pulse, and/or low blood pressure",
+      "I have been told I have high cholesterol",
+      "My hair is rough, coarse dry, breaking, brittle, or falling out",
+      "My skin is rough, coarse, dry, scaly, itchy, and thick",
+      "My nails have been dry and brittle, and break more easily",
+      "My eyebrows appear to be thinning, particularly the outer portion",
+      "My voice has become hoarse and/or ‘gravelly’",
+      "I have pains, aches, stiffness, or tingling in joints, muscles, hands and/or feet",
+      "I have carpal tunnel syndrome, tendonitis, or plantar fasciitis",
+      "I am constipated (less than 1 bowel movement daily)",
+      "I feel depressed, restless, moody, sad",
+      "I have difficulty concentrating or remembering things",
+      "I have a low sex drive",
+      "My eyes feel gritty, dry, light-sensitive",
+      "My neck or throat feels full, with pressure, or larger than usual, and/or I have difficulty swallowing",
+      "I have puffiness and swelling around the eyes, eyelids, face, feet, hands and feet",
+      "Women: I am having irregular menstrual cycles (longer, or heavier, or more frequent)"
+    ]
+  }
+}
