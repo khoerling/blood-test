@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+mkdir -p {web,native}/node_modules
+cp -pR packages/questions {web,native}/node_modules
