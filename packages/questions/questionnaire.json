@@ -1,4 +1,106 @@
 {
+  "Medical Symptoms Questionnaire": {
+    "Head": [
+      "Headaches",
+      "Faintness",
+      "Dizziness",
+      "Insomnia"
+    ],
+    "Eyes": [
+      "Watery or itchy eyes",
+      "Swollen, reddened or sticky eyelids",
+      "Bags or dark circles under eyes",
+      "Blurred or tunnel vision"
+    ],
+    "Ears": [
+      "Itchy ears",
+      "Earaches, ear infections",
+      "Drainage from ear",
+      "Ringing in ears, hearing loss"
+    ],
+    "Nose": [
+      "Stuffy nose",
+      "Sinus problems",
+      "Hay fever",
+      "Sneezing attacks",
+      "Excessive mucus formation"
+    ],
+    "Mouth & Throat": [
+      "Chronic coughing",
+      "Gagging, frequent need to clear throat",
+      "Sore throat, hoarseness, loss of voice",
+      "Swollen or discolored tongue, gums, lips",
+      "Canker sores"
+    ],
+    "Skin": [
+      "Acne",
+      "Hives, rashes, dry skin",
+      "Hair loss",
+      "Flushing, hot flashes",
+      "Excessive sweating"
+    ],
+    "Heart": [
+      "Irregular or skipped heartbeat",
+      "Rapid or pounding heartbeat",
+      "Chest pain"
+    ],
+    "Lungs": [
+      "Chest congestion",
+      "Asthma, bronchitis",
+      "Shortness of breath",
+      "Difficulty breathing"
+    ],
+    "Digestive Tract": [
+      "Nausea, vomiting",
+      "Diarrhea",
+      "Bloated feeling",
+      "Belching, passing gas",
+      "Heartburn",
+      "Intestinal & stomach pain"
+    ],
+    "Joints & Muscle": [
+      "Pain or aches in joints",
+      "Arthritis",
+      "Stiffness or limitation of movement",
+      "Pain or aches in muscles",
+      "Feeling of weakness or tiredness"
+    ],
+    "Weight": [
+      "Binge eating & drinking",
+      "Craving certain foods",
+      "Excessive weight",
+      "Compulsive eating",
+      "Water retention",
+      "Underweight"
+    ],
+    "Energy & Activity": [
+      "Fatigue, sluggishness",
+      "Apathy, lethargy",
+      "Hyperactivity",
+      "Restlessness"
+    ],
+    "Mind": [
+      "Poor memory",
+      "Confusion, poor comprehension",
+      "Poor concentration",
+      "Poor physical coordination",
+      "Difficulty in making decisions",
+      "Stuttering or stammering",
+      "Slurred speech",
+      "Learning disabilities"
+    ],
+    "Emotions": [
+      "Mood swings",
+      "Anxiety, fear, nervousness",
+      "Anger, irritability, aggressiveness",
+      "Depression"
+    ],
+    "Other": [
+      "Frequent illness",
+      "Frequent or urgent urination",
+      "Genital itch or discharge"
+    ]
+  },
   "Hormone, Sleep-Stress Dysfunction": {
     "Low Cortisol State": [
       "Lethargic depression",
