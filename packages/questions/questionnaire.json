@@ -1,5 +1,37 @@
 {
-  "Sleep Disorder": {
+  "Hormone, Sleep-Stress Dysfunction": {
+    "Low Cortisol State": [
+      "Lethargic depression",
+      "Excessive need for sleep",
+      "Chronic fatigue syndrome",
+      "Chronic pain",
+      "Fibromyalgia (musculoskeletal tender points)",
+      "Dizziness when you stand or bend",
+      "Low blood pressure and/or drop of blood pressure on standing",
+      "Craving salty foods-pretzels, pickles etc.",
+      "Poor wound healing",
+      "Easy bruising",
+      "Fatigue",
+      "Inability to handle even slight stresses",
+      "Hypoglycemia: dizzy, irritable, or sleepy if you go without food for 4-5 hours; symptoms relieved by food",
+      "Scars, elbows, nipples, or skin near nails that are unusually dark",
+      "Slow healing of cuts",
+      "Unstable body temperatures (hot or cold)"
+    ],
+    "Elevated Cortisol State": [
+      "Agitated depression",
+      "Weight gain around your abdomen, back of neck, and in the face and cheeks",
+      "Stretch marks-not from weight loss",
+      "Adult onset diabetes",
+      "Osteoporosis",
+      "Craving sweets",
+      "Trouble falling or staying asleep"
+    ],
+    "Adrenal Hyperplasia": [
+      "Excessive dark male pattern hair growth (women)",
+      "Irregular or no periods (not menopausal)",
+      "Eastern European heritage"
+    ]
   },
   "Thyroid": {
     "History": [
