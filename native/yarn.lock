@@ -1202,6 +1202,13 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+babel-plugin-cssta@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-cssta/-/babel-plugin-cssta-0.9.0.tgz#c2f9a648d7f7b744e7457690dd84b51ab1a58dce"
+  integrity sha512-tnpx05usaaQUSuDVVQcaXIEbUchmlvCImILzeE90G10ImDP3jUY5mMmrTKlehcWsOV9jLhAKgVbgPviGPtBuvw==
+  dependencies:
+    cssta "0.9.0"
+
 babel-plugin-dynamic-import-node@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.0.tgz#f00f507bdaa3c3e3ff6e7e5e98d90a7acab96f7f"
@@ -1787,7 +1794,7 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-cssta@^0.9.0:
+cssta@0.9.0, cssta@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/cssta/-/cssta-0.9.0.tgz#88a07c3cd3393d53d0d3c6fddf9275ca6d74aecf"
   integrity sha512-+m0j0C06vwYWvGWEgcRMjkExPCrX2ryqlG5KAPxrpqyueg1XI9xcTQ3icAjTD0tPaCTgX2WS9HUltW33DqWjkQ==
