@@ -8,11 +8,21 @@ const App = cssta(View)`
   flex: 1;
   justifyContent: center;
   alignItems: center;
-`
+  marginTop: 40;
+`,
+  entries = require('./src/static/fake_tests.json')
 
 export default () => (
   <App>
-    <Text>YO</Text>
-    <BottomCarousel />
+    <Text>Select a Test</Text>
+    <BottomCarousel
+      style={{
+        backgroundColor: 'blue',
+        position: 'absolute',
+        bottom: 0,
+        alignSelf: 'bottom'
+      }}
+      entries={entries}
+    />
   </App>
 )
