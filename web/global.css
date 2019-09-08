@@ -1,3 +1,13 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   background: #f2e931;
+  background-image: url(/static/origami.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
