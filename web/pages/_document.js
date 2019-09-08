@@ -15,6 +15,10 @@ class MyDocument extends Document {
             href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

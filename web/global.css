@@ -10,4 +10,9 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
+  font-family: 'Manjari', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
 }

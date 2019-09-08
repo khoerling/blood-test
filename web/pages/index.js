@@ -7,6 +7,16 @@ const Logo = styled.img`
   margin: 1rem auto;
 `
 
+const Button = styled.button`
+  border: none;
+  margin-right: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  background: black;
+  color: white;
+  outline: none;
+`
+
 class Home extends React.Component {
   onCheckout = () => {
     const stripe = window.Stripe('pk_test_xKDupS5AmFXBdTPfNaaPqfsO00LcCJ9kT1')
@@ -36,7 +46,22 @@ class Home extends React.Component {
     return (
       <div>
         <Logo src="/static/labtopia.png" alt="LABTOPIA" />
-        <button onClick={this.onCheckout}>Buy Complete Blood Count</button>
+        <div
+          style={{
+            position: 'relative',
+            left: '800px',
+            top: '200px'
+          }}
+        >
+          <h1>Be healthy, be happy.</h1>
+          <h3>
+            Track the numbers that matter the most for a healthy body and mind.
+          </h3>
+          <Button onClick={this.onCheckout}>Cholesterol levels</Button>
+          <Button disable onClick={this.onCheckout}>
+            Vitamin levels (coming soon)
+          </Button>
+        </div>
       </div>
     )
   }
