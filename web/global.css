@@ -4,10 +4,10 @@ body {
 }
 
 body {
-  background: #f2e931;
-  background-image: url(/static/origami.jpg);
-  background-position: center center;
-  background-size: cover;
+  background: #f8c5aa;
+  background-image: url(/static/stolen.png);
+  background-position: left top;
+  background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
 }
