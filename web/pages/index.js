@@ -1,4 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Logo = styled.img`
+  height: 1.5rem;
+  display: block;
+  margin: 1rem auto;
+`
 
 class Home extends React.Component {
   onCheckout = () => {
@@ -28,6 +35,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <Logo src="/static/labtopia.png" alt="LABTOPIA" />
         <button onClick={this.onCheckout}>Buy Complete Blood Count</button>
       </div>
     )
