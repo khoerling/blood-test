@@ -1,4 +1,11 @@
-import { View, Text, Dimensions, StyleSheet, Platform } from 'react-native'
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Dimensions,
+  StyleSheet,
+  Platform
+} from 'react-native'
 import Carousel, { Pagination, ParallaxImage } from 'react-native-snap-carousel'
 import cssta from 'cssta/native'
 
@@ -8,33 +15,38 @@ const { width: screenWidth } = Dimensions.get('window'),
     textAlign: center;
     marginTop: 10;
   `,
-  renderItem = ({ item }, parallaxProps) => {
-    return (
-      <View style={styles.item}>
-        <ParallaxImage
-          source={{ uri: item.thumbnail }}
-          containerStyle={styles.imageContainer}
-          style={styles.image}
-          parallaxFactor={0.4}
-          {...parallaxProps}
-        />
-        <Title numberOfLines={2}>{item.title}</Title>
-      </View>
-    )
+  renderItem = onPress => {
+    return ({ item }, parallaxProps) => {
+      return (
+        <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
+          <View style={styles.item}>
+            <ParallaxImage
+              source={{ uri: item.thumbnail }}
+              containerStyle={styles.imageContainer}
+              style={styles.image}
+              parallaxFactor={0.4}
+              {...parallaxProps}
+            />
+            <Title numberOfLines={2}>{item.title}</Title>
+          </View>
+        </TouchableOpacity>
+      )
+    }
   },
-  BottomCarousel = ({ entries }) => (
+  BottomCarousel = ({ entries, onSnapToItem, setModalVisible }) => (
     <Carousel
       sliderWidth={screenWidth}
       sliderHeight={screenWidth}
       itemWidth={screenWidth - 60}
       data={entries}
       loop={true}
+      onSnapToItem={onSnapToItem}
       activeAnimationType="decay"
       containerCustomStyle={{
         position: 'absolute',
         bottom: 50
       }}
-      renderItem={renderItem}
+      renderItem={renderItem(setModalVisible)}
       hasParallaxImages={true}
     />
   )
@@ -55,4 +67,5 @@ const styles = StyleSheet.create({
     resizeMode: 'cover'
   }
 })
+
 export { BottomCarousel }

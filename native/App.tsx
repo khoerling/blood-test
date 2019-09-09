@@ -1,12 +1,19 @@
-import React from 'react'
+import { useState } from 'react'
 import { Text, View, StatusBar } from 'react-native'
 // import { Questionaires, QuestionGroups, Questions } from 'questions'
 import cssta from 'cssta/native'
 import { BottomCarousel } from './src/components/BottomCarousel'
+import Modal from 'react-native-modal'
 
 const App = cssta(View)`
     flex: 1;
     marginTop: 40;
+  `,
+  ModalContainer = cssta(View)`
+    flex: 1;
+    background: #fff;
+    justifyContent: center;
+    alignItems: center;
   `,
   Head = cssta(View)`
     marginTop: 10px;
@@ -24,25 +31,43 @@ const App = cssta(View)`
   `,
   entries = require('./src/static/fake_tests.json')
 
-export default () => (
-  <App>
-    <StatusBar hidden={true} />
-    <Head>
-      <H2>UPCOMING:</H2>
-      <H1>Tomorrow @ Noon for Lipid Panel</H1>
-    </Head>
-    <H2>
-      You've Come to the Right Place, Friend. Choose a Test and Prolong Your
-      Health & Lifestyle:
-    </H2>
-    <BottomCarousel
-      style={{
-        backgroundColor: 'blue',
-        position: 'absolute',
-        bottom: 0,
-        alignSelf: 'bottom'
-      }}
-      entries={entries}
-    />
-  </App>
-)
+export default () => {
+  const [modalVisible, setModalVisible] = useState<boolean>(false),
+    [selectedTest, setSelectedTest] = useState<number>(0),
+    hideModal = _ => setModalVisible(false)
+  return (
+    <App>
+      <StatusBar hidden={true} />
+      <Head>
+        <H2>UPCOMING:</H2>
+        <H1>Tomorrow @ Noon for Lipid Panel</H1>
+      </Head>
+      <H2>
+        You've Come to the Right Place, Friend. Choose a Test and Prolong Your
+        Health & Lifestyle:
+      </H2>
+      <BottomCarousel
+        style={{
+          backgroundColor: 'blue',
+          position: 'absolute',
+          bottom: 0,
+          alignSelf: 'bottom'
+        }}
+        setModalVisible={setModalVisible}
+        onSnapToItem={setSelectedTest}
+        entries={entries}
+      />
+      <Modal
+        onSwipeComplete={hideModal}
+        swipeDirection={['up', 'down']}
+        useNativeDriver={true}
+        isVisible={modalVisible}
+        onBackdropPress={hideModal}
+      >
+        <ModalContainer>
+          <Text>Selected Test {selectedTest}</Text>
+        </ModalContainer>
+      </Modal>
+    </App>
+  )
+}
