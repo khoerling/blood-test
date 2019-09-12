@@ -19,10 +19,10 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.2",
-    "@types/react-native": "^0.60.11",
+    "@types/react-native": "^0.60.13",
     "babel-plugin-cssta": "^0.9.0",
     "babel-preset-expo": "^6.0.0",
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.3"
   },
   "private": true
 }
