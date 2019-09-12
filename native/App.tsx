@@ -3,7 +3,7 @@ import { Text, View, StatusBar } from 'react-native'
 // import { Questionaires, QuestionGroups, Questions } from 'questions'
 import cssta from 'cssta/native'
 import { BottomCarousel } from './src/components/BottomCarousel'
-import Modal from 'react-native-modal'
+import Modal from 'react-native-modalbox'
 
 const App = cssta(View)`
     flex: 1;
@@ -38,6 +38,11 @@ export default () => {
   return (
     <App>
       <StatusBar hidden={true} />
+      <Modal coverScreen={true} isOpen={modalVisible}>
+        <ModalContainer>
+          <Text>Selected Test {selectedTest}</Text>
+        </ModalContainer>
+      </Modal>
       <Head>
         <H2>UPCOMING:</H2>
         <H1>Tomorrow @ Noon for Lipid Panel</H1>
@@ -57,17 +62,6 @@ export default () => {
         onSnapToItem={setSelectedTest}
         entries={entries}
       />
-      <Modal
-        onSwipeComplete={hideModal}
-        swipeDirection={['up', 'down']}
-        useNativeDriver={true}
-        isVisible={modalVisible}
-        onBackdropPress={hideModal}
-      >
-        <ModalContainer>
-          <Text>Selected Test {selectedTest}</Text>
-        </ModalContainer>
-      </Modal>
     </App>
   )
 }
