@@ -38,7 +38,7 @@ export default () => {
   return (
     <App>
       <StatusBar hidden={true} />
-      <Modal coverScreen={true} isOpen={modalVisible}>
+      <Modal useNativeDriver={false} coverScreen={true} isOpen={modalVisible}>
         <ModalContainer>
           <Text>Selected Test {selectedTest}</Text>
         </ModalContainer>
