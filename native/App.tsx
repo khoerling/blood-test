@@ -4,6 +4,7 @@ import { Text, View, StatusBar } from 'react-native'
 import cssta from 'cssta/native'
 import { BottomCarousel } from './src/components/BottomCarousel'
 import Modal from 'react-native-modalbox'
+import { PaymentsStripe as Stripe } from 'expo-payments-stripe'
 
 const App = cssta(View)`
     flex: 1;
@@ -30,6 +31,14 @@ const App = cssta(View)`
     fontSize: 13rem;
   `,
   entries = require('./src/static/fake_tests.json')
+
+// XXX does this work on android?
+// init stripe
+Stripe.setOptionsAsync({
+  publishableKey: 'pk_test_xKDupS5AmFXBdTPfNaaPqfsO00LcCJ9kT1',
+  androidPayMode: 'test',
+  merchantId: 'your_merchant_id' // [optional] used for payments with ApplePay
+})
 
 export default () => {
   const [modalVisible, setModalVisible] = useState<boolean>(false),

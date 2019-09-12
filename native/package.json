@@ -10,6 +10,7 @@
   "dependencies": {
     "cssta": "^0.9.0",
     "expo": "^34.0.4",
+    "expo-payments-stripe": "^6.0.0",
     "expokit": "34.0.2",
     "react": "16.9.0",
     "react-dom": "^16.9.0",
