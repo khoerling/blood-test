@@ -56,6 +56,8 @@ target 'blood-test' do
       :path => "../node_modules/expo-payments-stripe/ios",
       :inhibit_warnings => true
 
+  pod 'RNAwesomeCardIO', :path => '../node_modules/react-native-awesome-card-io'
+
   post_install do |installer|
     installer.pods_project.main_group.tab_width = '2';
     installer.pods_project.main_group.indent_width = '2';
