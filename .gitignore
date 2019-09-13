@@ -77,3 +77,5 @@ static/domains
 
 # cypress output
 cypress/videos
+
+native/ios/Pods
