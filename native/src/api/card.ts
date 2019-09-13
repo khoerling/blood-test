@@ -1,20 +1,23 @@
 import { CardIOModule, CardIOUtilities } from 'react-native-awesome-card-io'
-import { processColor } from 'react-native'
+import { Platform, processColor } from 'react-native'
 import { get, set } from './storage'
 
 const key = 'card',
   scanCard = async () => {
-    CardIOUtilities.preload()
     return await scan()
   },
   getCard = async () => {
     return (await get(key)) || null
   }
 
+if (Platform.OS === 'ios') CardIOUtilities.preload()
+
 // ---------
 async function scan() {
   const card = await CardIOModule.scanCard({
     guideColor: processColor('#ffffff'),
+    suppressManualEntry: true,
+    keepStatusBarStyle: true,
     hideCardIOLogo: true,
     requireCardholderName: true
   })

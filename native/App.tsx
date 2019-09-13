@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Text, View, StatusBar } from 'react-native'
-// import { Questionaires, QuestionGroups, Questions } from 'questions'
 import cssta from 'cssta/native'
-import { BottomCarousel } from './src/components/BottomCarousel'
 import Modal from 'react-native-modalbox'
-import { PaymentsStripe as Stripe } from 'expo-payments-stripe'
+
+// import { Questionaires, QuestionGroups, Questions } from 'questions'
+import { BottomCarousel } from './src/components/BottomCarousel'
+import { Payment } from './src/components/Payment'
 
 const App = cssta(View)`
     flex: 1;
@@ -15,30 +16,31 @@ const App = cssta(View)`
     background: #fff;
     justifyContent: center;
     alignItems: center;
+    marginTop: 100;
   `,
   Head = cssta(View)`
     marginTop: 10px;
   `,
   H1 = cssta(Text)`
-    lineHeight: 24rem;
+    lineHeight: 24px;
     margin: 0 30px 25px;
-    fontSize: 18rem;
+    fontSize: 22;
   `,
   H2 = cssta(Text)`
     textAlign: justify;
-    lineHeight: 24rem;
+    lineHeight: 24px;
     margin: 0 30px;
-    fontSize: 13rem;
+    fontSize: 16;
   `,
   entries = require('./src/static/fake_tests.json')
 
 // XXX does this work on android?
-// init stripe
-Stripe.setOptionsAsync({
-  publishableKey: 'pk_test_xKDupS5AmFXBdTPfNaaPqfsO00LcCJ9kT1',
-  androidPayMode: 'test',
-  merchantId: 'your_merchant_id' // [optional] used for payments with ApplePay
-})
+// // init stripe
+// Stripe.setOptionsAsync({
+//   publishableKey: 'pk_test_xKDupS5AmFXBdTPfNaaPqfsO00LcCJ9kT1',
+//   androidPayMode: 'test',
+//   merchantId: 'your_merchant_id' // [optional] used for payments with ApplePay
+// })
 
 export default () => {
   const [modalVisible, setModalVisible] = useState<boolean>(false),
@@ -47,9 +49,10 @@ export default () => {
   return (
     <App>
       <StatusBar hidden={true} />
-      <Modal useNativeDriver={false} coverScreen={true} isOpen={modalVisible}>
+      <Modal useNativeDriver={false} coverScreen={false} isOpen={modalVisible}>
         <ModalContainer>
-          <Text>Selected Test {selectedTest}</Text>
+          <H1>Selected Test {selectedTest + 1}</H1>
+          <Payment />
         </ModalContainer>
       </Modal>
       <Head>

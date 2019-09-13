@@ -11,7 +11,7 @@ import cssta from 'cssta/native'
 
 const { width: screenWidth } = Dimensions.get('window'),
   Title = cssta(Text)`
-    fontSize: 30rem;
+    fontSize: 30px;
     textAlign: center;
     marginTop: 10;
   `,
