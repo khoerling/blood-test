@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Col, Row } from 'react-styled-flexboxgrid'
 
 const Logo = styled.img`
   height: 1.5rem;
@@ -46,22 +47,22 @@ class Home extends React.Component {
     return (
       <div>
         <Logo src="/static/labtopia.png" alt="LABTOPIA" />
-        <div
-          style={{
-            position: 'relative',
-            left: '800px',
-            top: '200px'
-          }}
-        >
-          <h1>Be healthy, be happy.</h1>
-          <h3>
-            Track the numbers that matter the most for a healthy body and mind.
-          </h3>
-          <Button onClick={this.onCheckout}>Cholesterol levels</Button>
-          <Button disable onClick={this.onCheckout}>
-            Vitamin levels (coming soon)
-          </Button>
-        </div>
+        <Row>
+          <Col sm={6}></Col>
+          <Col sm={6}>
+            <div style={{ paddingTop: '10rem' }}>
+              <h1>Be healthy, be happy.</h1>
+              <h3>
+                Track the numbers that matter the most for a healthy body and
+                mind.
+              </h3>
+              <Button onClick={this.onCheckout}>Cholesterol levels</Button>
+              <Button disable onClick={this.onCheckout}>
+                Vitamin levels (coming soon)
+              </Button>
+            </div>
+          </Col>
+        </Row>
       </div>
     )
   }
