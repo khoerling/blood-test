@@ -34,14 +34,6 @@ const App = cssta(View)`
   `,
   entries = require('./src/static/fake_tests.json')
 
-// XXX does this work on android?
-// // init stripe
-// Stripe.setOptionsAsync({
-//   publishableKey: 'pk_test_xKDupS5AmFXBdTPfNaaPqfsO00LcCJ9kT1',
-//   androidPayMode: 'test',
-//   merchantId: 'your_merchant_id' // [optional] used for payments with ApplePay
-// })
-
 export default () => {
   const [modalVisible, setModalVisible] = useState<boolean>(false),
     [selectedTest, setSelectedTest] = useState<number>(0),

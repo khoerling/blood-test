@@ -1,14 +1,6 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Dimensions,
-  StyleSheet,
-  Platform
-} from 'react-native'
+import { View, Text, TouchableOpacity, Dimensions } from 'react-native'
 import cssta from 'cssta/native'
-import { CreditCardInput } from 'react-native-credit-card-input'
-import { scanCard } from '../api/card'
+import { paymentRequest } from '../api/card'
 
 const { width: screenWidth } = Dimensions.get('window'),
   Container = cssta(View)`
@@ -28,14 +20,9 @@ const { width: screenWidth } = Dimensions.get('window'),
   `,
   Payment = () => (
     <Container>
-      <CreditCardInput
-        labels={{}}
-        allowScroll={false}
-        onChange={this._onChange}
-      />
-      <ScanButton onPress={scanCard}>
-        <Title>Scan Card</Title>
-      </ScanButton>
+      <TouchableOpacity onPress={paymentRequest}>
+        <Text>PAY</Text>
+      </TouchableOpacity>
     </Container>
   )
 
