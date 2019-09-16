@@ -10,6 +10,10 @@ target 'blood-test' do
     ],
     :inhibit_warnings => true
 
+  pod 'EXPaymentsStripe',
+      :path => "../node_modules/expo-payments-stripe/ios",
+      :inhibit_warnings => true
+  
   # Install unimodules
   require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
   use_unimodules!(
@@ -55,6 +59,7 @@ target 'blood-test' do
   pod 'EXPaymentsStripe',
       :path => "../node_modules/expo-payments-stripe/ios",
       :inhibit_warnings => true
+
 
   pod 'RNAwesomeCardIO', :path => '../node_modules/react-native-awesome-card-io'
 
