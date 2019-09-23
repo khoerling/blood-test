@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Col, Row } from 'react-styled-flexboxgrid'
+import { Elements, StripeProvider } from 'react-stripe-elements'
+import CheckoutForm from '../components/CheckoutForm'
 
 const Logo = styled.img`
   height: 1.5rem;
@@ -19,28 +21,43 @@ const Button = styled.button`
 `
 
 class Home extends React.Component {
-  onCheckout = () => {
-    const stripe = window.Stripe('pk_test_xKDupS5AmFXBdTPfNaaPqfsO00LcCJ9kT1')
-    stripe
-      .redirectToCheckout({
-        items: [{ sku: 'sku_FbIhIQx7psdUxU', quantity: 1 }],
+  constructor(props) {
+    super(props)
+    this.state = {
+      stripe: null
+    }
+  }
 
-        // Do not rely on the redirect to the successUrl for fulfilling
-        // purchases, customers may not always reach the success_url after
-        // a successful payment.
-        // Instead use one of the strategies described in
-        // https://stripe.com/docs/payments/checkout/fulfillment
-        successUrl: window.location.protocol + '//localhost:3000/success',
-        cancelUrl: window.location.protocol + '//localhost:3000/canceled'
-      })
-      .then(function(result) {
-        if (result.error) {
-          // If `redirectToCheckout` fails due to a browser or network
-          // error, display the localized error message to your customer.
-          var displayError = document.getElementById('error-message')
-          displayError.textContent = result.error.message
-        }
-      })
+  componentDidMount() {
+    this.setState({
+      stripe: window.Stripe('pk_test_xKDupS5AmFXBdTPfNaaPqfsO00LcCJ9kT1')
+    })
+  }
+
+  onCheckout = () => {
+    if (window) {
+      const stripe = window.Stripe('pk_test_xKDupS5AmFXBdTPfNaaPqfsO00LcCJ9kT1')
+      stripe
+        .redirectToCheckout({
+          items: [{ sku: 'sku_FbIhIQx7psdUxU', quantity: 1 }],
+
+          // Do not rely on the redirect to the successUrl for fulfilling
+          // purchases, customers may not always reach the success_url after
+          // a successful payment.
+          // Instead use one of the strategies described in
+          // https://stripe.com/docs/payments/checkout/fulfillment
+          successUrl: window.location.protocol + '//localhost:3000/success',
+          cancelUrl: window.location.protocol + '//localhost:3000/canceled'
+        })
+        .then(function(result) {
+          if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById('error-message')
+            displayError.textContent = result.error.message
+          }
+        })
+    }
   }
 
   render() {
@@ -60,6 +77,23 @@ class Home extends React.Component {
               <Button disable onClick={this.onCheckout}>
                 Vitamin levels (coming soon)
               </Button>
+              <div
+                style={{
+                  borderRadius: '6px',
+                  padding: '1rem',
+                  margin: '1rem 0',
+                  background: '#fff',
+                  maxWidth: '400px'
+                }}
+              >
+                {typeof window === 'object' && this.state.stripe ? (
+                  <StripeProvider apiKey={this.state.stripe._apiKey}>
+                    <Elements>
+                      <CheckoutForm />
+                    </Elements>
+                  </StripeProvider>
+                ) : null}
+              </div>
             </div>
           </Col>
         </Row>

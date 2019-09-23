@@ -13,7 +13,9 @@
     "next": "^9.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-stripe-elements": "^5.0.0",
     "react-styled-flexboxgrid": "^3.1.0",
+    "stripe": "^7.9.0",
     "styled-components": "^4.3.2"
   }
 }
